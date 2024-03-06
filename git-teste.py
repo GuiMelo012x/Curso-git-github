@@ -1,0 +1,16 @@
+print("Este é um arquivo que criei para testar os comandos do git durante o curso de Github - Básico ao Avançado!")
+
+print("----- Comandos -----")
+
+print("git status --> mostra as mudanças que foram feitas no repositório antes do commit.")
+print("git init --> inicializa um repositório.")
+print("git add --> adiciona o arquivo no repositório e ao controle de versão.")
+print("git commit -a -m 'mensagem' --> commita todos os arquivos de uma vez, enviando uma mensagem para o repositório explicando o que foi o commit.")
+print("git clone <url> --> clona o repositório e baixa ele para a sua máquina.")
+print("git pull --> atualiza o repositório remoto para adicionar, editar ou remover os arquivos que estão lá no github, caso esteja desatualizado.")
+print("git rm <arquivo> --> remove o arquivo da pasta.")
+print("git log --> mostra uma informação do commits realizado no projeto até o momento.")
+print("git mv <arquivo> <local de destino> --> move o arquivo.")		
+print("git mv <arquivo> <nome do arquivo> --> renomeia um arquivo. Se não mover o arquivo, ele entende que você quer renomear.")
+print("git checkout <arquivo> --> desfaz a alteração e muda o arquivo de volta para como ele está no github.")
+print("git reset --hard origin/master --> reseta todas as alterações feitas.")
