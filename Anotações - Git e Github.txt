@@ -131,3 +131,62 @@ Desfazendo todas as alterações:
 	Comando perigoso, deve ser utilizado com cuidado.
 	Comando:
 		git reset --hard origin/master --> reseta todas as alterações feitas.
+		
+O que são branches?
+	É uma ramificação de um projeto.
+	É a forma que o git separa as versões dos projetos.
+	Geralmente, cada nova função do projeto fica em um branch separado.
+	Após a finalização das alterações, os branches são unidos para ter o código-fonte final.
+	É uma versão separada da versão original do projeto.
+	
+Criando e visualizando as branches:
+	Muito utilizado no dia-a-dia do programador.
+	Comandos:
+		git branch --> visualiza os branches disponíveis
+		git branch <nome> --> cria um novo branch
+
+Deletando branches:
+	Geralmente é utilizado quando o branch foi criado errado
+	Não é comum deletar um branch, normalmente é guardado o histórico do trabalho.
+	Utilizar com cuidado, pois pode perder o trabalho feito.
+	Comando:
+		git branch -d <nome da branch> --> apaga a branch.
+		
+Mudando de Branch:
+	Ter cuidado, pois os arquivos que não foram commitados perdem as alterações.
+	Sempre que mudar uma branch, commitar.
+	Sempre que criar uma branch, criar ele a partir da master.
+	Comando:
+		git checkout <nome de um branch existente> --> muda para a branch existente. 
+		git checkout -b <nome do branch> --> cria e muda para a branch criado.
+
+Unindo branches
+	O código de duas branches distintos pode ser unido.
+	É por meio dele que recebemos atualizações de outros dev.
+	Comando:
+		git merge <nome> --> une o código duas branches.
+		
+Stash 
+	Utilizado para salvar as modificações atuais para prosseguir com uma outra abordagem de solução e não perder o código
+	Assim, você salva o código em um lugar e pode recomeçar do zero.
+	Podemos continuar de onde paramos com o arquivos adicionados a stash.
+	Comandos: 
+		git stash --> salva o código e guarda no "stash".
+		git stash list --> mostra a lista de stashes.
+		git stash apply <0,1,2,3...> --> recupera a stash.
+		git stash show -p <0,1,2,3...> --> mostra as modificações da stash.
+		git stash clear --> limpa todas as stashes da branch.
+		git stash drop <0,1,2,3...> --> limpa uma stash específica.
+		
+Tags
+	Podemos criar tags nas branches.
+	Uma tag é diferente da stash, servindo como um checkpoint de um branch.
+	É utilizada para demarcar estágios do desenvolvimento de algum recurso, como "v1,v2,v3" etc.
+	Comando:
+		git tag -a <nome> -m <mensagem> --> cria uma tag e sua mensagem.
+		git tag --> verifica as tags de uma branch. É como se fosse uma branch de uma branch.
+		git show <nome> --> verificamos os detalhes de uma tag.
+		git checkout <nome da tag> --> troca de tag.
+		git push origin <nome da tag> --> envia a tag pro repositório.
+		git push origin --tags --> envia mais tag.
+	As tags podem ser enviadas para o repositório do código, sendo compartilhada entre os devs.
