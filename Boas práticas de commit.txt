@@ -1,0 +1,34 @@
+Melhorando os commits do projeto
+	Commits sem sentido atrapalham o projeto, é necessário padronizar o commits para que o projeto cresça de forma saudável também no versionamento.
+	Os commits bem-feitos ajudam na hora do review do pull request, na melhoria dos logs do git log, e na manutenção do projeto.
+	É necessário fazer commits que realmente tem informações, nunca enviar commits do tipo "volto depois", "falta isso", "fui almoçar" etc.
+	É bom evitar commits de checkpoint e enviar apenas um commit, que é o final com a funcionalidade pronta.
+	
+Private Branches
+	Há uma solução chamada private branches.
+	Dessa forma, tem como criar um branch só para você, onde você pode dar quantos commits quiser, e quando finalizar, manda pra fora e dá só um commit final público.
+	Comando:
+		git rebase <branch atual> <branch privado> -i --> cria um log para alterar o commits.
+	É necessário apertar "i" para começar a editar.
+	Para deletar o commit, é necessário escrever "squash" no início da linha do commit.
+	Para renomear o commit, é necessário escrever "reword" no início da linha do commit.
+	Para sair, ":x!".
+	Depois, só reescrever o commit. 
+
+Boas mensagens de commit
+	Separar o assunto(título) do corpo(texto/descrição) da mensagem. Ou seja, título e texto.
+	O assunto deve ter no máximo 50 caracteres e primeira letra maiúscula.
+	O corpo deve ter no máximo 72 caracteres, e deve explicar o por que e como a solução foi feita. Não é pra explicar como o código foi feito.
+	Não pode ficar muito longo pois fica resumido, preciso e concreto. E para acelerar o processo, assim a pessoa não tem que abrir o commit pra ler tudo.
+	Algumas ferramentas podem comer letras, então quanto menos, melhor.
+	Para isso:
+		git commit -a -m "Commit explicando o que foi feito(assunto)
+		
+		Explicação sobre a função e tudo que foi feito durante o commit."
+	
+	Ou seja, após escrever o título, é necessário pular uma linha e começar a escrever o corpo.
+	No VSCode, é preciso apagar a última aspa e apertar enter.
+	Geralmente não se usa ponto final após o assunto.
+	Após escrever tudo, só fechar a aspas e dar Enter.
+	Após isso, o commit fica muito mais bonito e legível no log.
+	

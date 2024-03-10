@@ -70,11 +70,13 @@ Salvando alterações no projeto:
 Enviando o código para o repositório:
 	Após commitar, é necessário enviar o código atualizado para o repositório.
 	Após o commit, o código estará apenas aguardando o push.
+	Antes de qualquer push, é necessário dar add e commit.
 	É necessário verificar pelo git status se não tem mais nada como "untracked" ou "modified" para dar commit, e tudo está pronto mesmo.
 	Para isso, utilizamos o git push.
 	Comando:
 		git push --> envia todos os códigos para o repositório (https://github.com/GuiMelo012x/git-teste1)
 	É possível, por meio do github, ver os históricos dos commits.
+	
 	
 Recebendo arquivos:
 	É comum ter que sincronizar o repositório local com as mudanças do remoto.
@@ -190,3 +192,89 @@ Tags
 		git push origin <nome da tag> --> envia a tag pro repositório.
 		git push origin --tags --> envia mais tag.
 	As tags podem ser enviadas para o repositório do código, sendo compartilhada entre os devs.
+
+Encontrando branches
+	Branches novos são criados a todo tempo e o seu git pode não estar mapeando todos eles.
+	Comando:
+		git fetch --> atualiza todos os branches e tag que ainda não estão reconhecidos por você.
+		
+Recebendo alterações - git pull
+	Cada branch pode ser atualizado com o git pull.
+	Guia de boa prática para fazer toda vez ao começar a trabalhar em um projeto:
+		git checkout master -> git pull -> git checkout -b "nome do branch novo"
+
+Enviando alterações - Git push
+	O git push envia as alterações para o repositório remoto.
+	Ele serve também para enviar as atualizaçõe de um branch específico para um outro dev.
+	Antes de qualquer push, é necessário dar add e commit.
+	
+Utilizando o remote
+	Através do comando "git remote", é possível adicionar um repositório para trackear ou remover.
+	Quando criamos um repositório remoto, adicionamo ele ao git com:
+		git remote add origin <link> --> adiciona um url de origem para o repositório.
+		git remote -v --> verifica as origens do repositório.
+		git remote rm origin --> remove a url de origem.
+		
+Trabalhando com submódulos
+	Submódulos é a maneira de se ter dois ou mais projetos em um só repositório.
+	É possível adicionar uma dependência ao projeto atual, porém mantendo suas estruturas separadas.
+	Comandos:
+		git submodule add <repo> --> adiciona um submódulo.
+		git submodule --> verifica os submódulos.
+
+Atualizando submódulos
+	Antes de atualizar o submódulo, é necessário commitar as mudanças.
+	Comando:
+		git push --recurse-submodules=on-demand --> atualiza o submódulo. 
+	Este comando faz a atualização apenas no submódulo.
+	
+Análise e Inspeção de Repositórios
+
+Exibindo detalhes de branches e as diferenças entre um branch e outro.
+	Através do git show, as modificações de arquivos entre cada commits podem ser exibidas
+	Comando:
+		git show --> dá informações úteis de um branch e seus commits.
+		git diff --> exibe as diferenças do branch atual com o remoto no terminal.
+
+Log resumido
+	Comando:
+		git shortlog --> dá um log resumido do projeto.
+	Cada commit pode ser unido por nome do autor.
+	Desta forma, tem como saber quais commits foram enviados ao projeto e por quem.
+	Mostra uma lista sde commits e quem commitou.
+	
+Limpando arquivos untracked
+	O comando git clean verifica e limpa arquivos que não estão sendo trackeados.
+	É útil para todos os arquivos que não foram adicionados no git add.
+	Utilizado para arquivos que são gerados automaticamente como logs e atrapalham a visualização do que é realmente importante.
+	Para evitar que um arquivo importante seja removido, é necessário utilizar o comando git add nele, senão, ele vai junto com os logs no git clean.
+	Comando:
+		git clean --> limpa arquivos que não foram trackeados.
+		
+Otimizando o repositório
+	O comando git gc detecta e remove arquivos que ele julga desnecessários para liberar memória.
+	Gc é uma abreviação para garbage collector.
+	Isso fará com que o repositório seja otimizado em questão de performance.
+	É bom utilizar uma vez por mês.
+	É comum demorar caso o repositório seja muito grande.
+	Comando: 
+		git gc --> comprime e remove arquivos em que o git julga desnecessário.
+		
+Checando integridade dos arquivos
+	O comando git fsck verifica arquivos que foram corrompidos, ou possíveis corrupções nele.
+	Fsck é uma abreviação para File System Check
+	É um comando de rotina, utilizado frequentemente para ver se está tudo certo com os arquivos do repositório.
+	Comando:
+		git fsck --> checa a integridade e procura por corrupções.
+		
+Reflog
+	O comando git reflog mapea todos os passos dados no repositório em um log. Armazena até quando há mudança de branch.	
+	O git log armazena apenas os commits de um branch.
+	Os reflogs ficam salvos até expirar, o tempo de expiração padrão é de 30 dias.
+	
+Zipando o repositório
+	Se necessário fazer um backup rápido do projeto, e não tenha como usar o git clone, é possível transformá-lo em arquivo.
+	Dessa forma, ele zipa a branch master em um arquivo.
+	Comando:
+		git archive --format zip --output master_files.zip master --> Zipa a branch master num arquivo .zip.
+		
