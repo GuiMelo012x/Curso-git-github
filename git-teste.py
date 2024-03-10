@@ -53,7 +53,6 @@ print("git diff --> exibe as diferenças do branch atual com o remoto no termina
 print("git shortlog --> dá um log resumido do projeto.")
 print("git reflog --> gera um log detalhado sobre tudo que foi feito no repositório, incluindo até mudanças de branch.")
 
-
 print("----- Otimização do Repositório -----")
 print("git clean --> limpa arquivos que não foram trackeados.")
 print("git gc --> comprime e remove arquivos em que o git julga desnecessário.")
