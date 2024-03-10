@@ -277,4 +277,3 @@ Zipando o repositório
 	Dessa forma, ele zipa a branch master em um arquivo.
 	Comando:
 		git archive --format zip --output master_files.zip master --> Zipa a branch master num arquivo .zip.
-		
