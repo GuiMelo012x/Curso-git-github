@@ -1,0 +1,32 @@
+Criação do Repositório
+	Deve ter um nome fácil de encontrar e objetivo.
+	Ao colocar licença, as pessoas não podem sair fazendo o que quiserem com seu código.
+
+Aba Code
+	É onde está o código fonte.
+	Podemos checar a documentação do projeto pelo readme, e as licenças.
+	É onde podemos criar branches, adicionar arquivos, remover, editar etc.
+	Podemos verificar os branches e tags e ver quais existem.
+
+Issue
+	A aba em que você cria tarefas e bugs do projeto.
+	É feito para a organização saber que precisa se manter ciente do que ainda precisa fazer ou corrigir.
+	Normalmente há um padrão para criação de novos issues.
+	Também é possível utilizar markdown, como no readme.
+	A issue deve ter uma label e um responsável.
+	Assignees --> quem vai ser o responsável por cuidar da issue.
+	Labels --> através de cores, ele marca se é um bug, se precisa de atenção extra, se já existe essa issue, se não vai ser modificado, se parece estranho, entre outras.
+	É possível você mesmo criar uma label, caso precise.
+	Você pode fazer comentários e interagir com outras pessoas do projeto.
+	Quando finalizar a issue, escrever um comentário e clicar em "close issue".
+
+Pull Request
+	É onde os colaboradores do projeto enviam código para resolver as issues ou adicionar novas funcionalidades ao projeto.
+	A ideia é que o código não entre direto na main e sim seja analisado antes, através desse pull request.
+	Dessa forma, o código será avaliado e analisado antes de ser enviado para a main.
+	O pull request vem de um novo branch criado no projeto e enviado para o repositório, com o incremento do código.
+	Nem toda issue é necessariamente resolvida por um pull request.
+	Se você é apenas o dev, na parte de "merge pull request" provavelmente não vai ser você que vai mexer nisto, e sim o gerenciador do projeto.
+	Após o merge, os arquivos e mudanças do "branch 1" vai para a main e o trabalho está feito.
+	Ao clicar em new pull request, é para fazer de acordo com esta ordem:
+		main <- branch_da_funcao
