@@ -30,3 +30,58 @@ Pull Request
 	Após o merge, os arquivos e mudanças do "branch 1" vai para a main e o trabalho está feito.
 	Ao clicar em new pull request, é para fazer de acordo com esta ordem:
 		main <- branch_da_funcao
+		
+Actions
+	É onde se cria as automatizações de deploy com integração em outros serviços, incluindo CI e CD.
+	CI = Continuous Integration
+	CD = Continuouss Development
+	Desta forma, podemos criar uma rotina de atualizar a main automaticamente.
+	Se der algum erro, ele faz um rollback no código.
+	Ele automatiza todo o processo manual.
+	
+Projects
+	Na aba projects podemos criar um projeto e utilizar um quadro de tarefas.
+	Este processo é conhecido como Kanban e pode ajudar seu time, criando notas que podem virar issues.
+	Estrutura interessante: Backlog, Retorno de Qualidade, Desenvolvimento, Testes, Finalizadas.
+		Backlog - dá o repositório geral das tarefas que não foram inicializadas ainda.
+		Retorno de Qualidade - onde o tester verifica que tem um problema na tarefa e põe para ser desenvolvida novamente.
+		Desenvolvimento - quando estamos fazendo uma tarefa, e logo após passamos a tarefa para o teste.
+		Teste - quando vamos testar a tarefa feita anteriormente.
+		Finalizadas - quando, após o teste verificar que está tudo certo, passa para "finalizadas", esperando pelo deploy.
+	 
+Wiki
+	Na aba Wiki, é possível escrever uma documentação mais extensa para o projeto, como descrever funcionalidades, bugs conhecidos e não solucionados, etc.
+	A ideia é que seja um repositório de conhecimento sobre o projeto.
+
+Insights
+	Nesta aba, é possível ter informações detalhadas sobre o projeto.
+	Tem como ver quem são os contribuidores, os commits, forks e muito mais.
+		Fork --> quando um usuário clona seu projeto para o github dele, podendo criar suas próprias funcionalidades com base no seu código.
+	É interessante para entender como o projeto está andando e sua evolução desde o início.
+	Tem como ver quantos commits foram dados, quantos pull request estão abertos, se tem issue aberta ou fechada.
+	Tem como ver as tag, os merges, etc.
+	Na parte "Community Standarts" você vê oq está faltando no seu código, comparado com a comunidad em geral.
+		Como o código de conduta, contribuição, um issue template, pull request template, etc.
+
+Settings
+	Nela, temos acesso a diversas configurações do projeto.
+	É onde podemos alterar o nome do repositório ou adicionar/remover features, adicionar colaboradores ao projeto etc.
+	Também é por meio desta aba que podemos apagar o repositório.
+	É possível alterar o template, desabilitar as issues, habilitar patrocínio.
+	Na Danger Zone, é possível deixar o repositório privado, arquivar, transferir a propriedade e deletar.
+	Tem como convidar colaboradores na parte "manage acess".
+	Na parte "branches" tem como alterar o branch principal do projeto.
+	
+Criando um Gist
+	Gist são blocos de código que podem ser hospedados no github.
+	É possível armazenar a solução de um bug que você não quer perder, por exemplo.
+	O link do Gist pode ser compartilhado.
+	Neste "repositório", só vai haver um arquivo.
+	O gist fica em outro servidor, diferente do github tradicional.
+
+Encontrando repositórios
+	É possível encontrar repositórios de outras pessoas e aprender nestes repositórios.
+	Podemos fazer o fork, que é replicar um projeto.
+	Podemos dar "star", que é favoritar um projeto, que fica salvo numa seção no seu perfil.
+	Lá podemos ver os contribuidores, as issues, participar de discussões, ver quem utilizou o projeto.
+	Em alguns repositórios, é possível criar issues e discutir. Qualquer poderia criar uma issue.
