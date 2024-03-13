@@ -34,7 +34,7 @@ O que é GitHub?
 Enviando repositórios para o GitHub:
 	Só é necessário fazer uma vez por projeto.
 	Comandos:
-		git add <arquivo> --> adiciona um arquivo ao repositório
+		git add <arquivo> --> adiciona um arquivo ao repositório.
 		git commit -m "mensagem" --> commita e envia para o servidor, seguido de uma mensagem informando sobre oque é o commit.
 		git branch -m main --> criando uma branch mestre, onde o código correto estará depositado.
 		git remote add origin https://github.com/GuiMelo012x/git-teste1.git --> sincroniza e dá uma origem ao projeto.
@@ -45,7 +45,7 @@ Como verificar mudanças no projeto:
 	Comando:
 		git status --> mostra as mudanças que foram feitas no repositório antes do commit.
 	Tudo que está no "git status" é o que não está no github.
-	Ao usar o comando, o terminal irá dizer todos os arquivos modificados antes do commit na seção "Untracked files"
+	Ao usar o comando, o terminal irá dizer todos os arquivos modificados antes do commit na seção "Untracked files".
 	No VSCode, ele avisa com uma letra do lado direito do nome do arquivo o status dele.
 		U -> Untracked. Não deu o comando "git add".
 		M -> Modified. Arquivo que já foi enviado ao git e foi modificado.
@@ -83,7 +83,7 @@ Recebendo arquivos:
 	Após o comando, serão buscadas atualizações, e se encontradas, serão unidas ao código existente na própria máquina.
 	Comando:
 		git pull --> atualiza o repositório remoto para adicionar, editar ou remover os arquivos que estão lá no github, caso esteja desatualizado.
-			Se não tiver nada para atualizar, ele diz "already up to date"
+			Se não tiver nada para atualizar, ele diz "already up to date".
 			Se tiver desatualizado, o arquivo do github virá para o VSCode, por exemplo.
 	Se o arquivo for editado lá no Github, também é possível dar o git pull e atualizá-lo.
 
