@@ -84,4 +84,4 @@ Encontrando repositórios
 	Podemos fazer o fork, que é replicar um projeto.
 	Podemos dar "star", que é favoritar um projeto, que fica salvo numa seção no seu perfil.
 	Lá podemos ver os contribuidores, as issues, participar de discussões, ver quem utilizou o projeto.
-	Em alguns repositórios, é possível criar issues e discutir. Qualquer poderia criar uma issue.
+	Em alguns repositórios, é possível criar issues e discutir. Qualquer poderia criar uma issue.Labels

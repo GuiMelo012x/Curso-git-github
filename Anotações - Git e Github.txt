@@ -1,0 +1,279 @@
+Guilherme Melo - Curso de Git, do Básico ao Avançado.
+trocar master -> main
+
+O que é controle de versão?
+	Controle de versão é uma técnica que ajuda a gerenciar o código fonte de uma aplicação.
+	Ele pode criar pontos de restauração, podendo reverter modificações, caso algo tenha dado errado.
+	Com ele, é possível ver quando e quem alterou o código.
+	É possível alterar entre as funcionalidades.
+	Cada membro trabalhando em uma versão diferente significa que cada um está trabalhando em um branch diferente.
+
+O que é git?
+	O git é o sistema de controle de versão mai utilizado do mundo atualmente.
+	É tudo guardado em repositórios, que contém todas as versões do código e as cópias de cada desenvolvedor.
+	Se alguém baixar o repositório, ele irá possuir acesso a todos os branches.
+	Todo repositório é um projeto.
+	Todos os projetos são protegidos com criptografia.
+	O git é um projeto de código aberto.
+	Git é a ferramenta, github é um servidor que armazena os projetos.
+
+O que é um repositório?
+	É o local onde o código está armazenado.
+	Geralmente, cada projeto tem um repositório, também chamado apenas de "repo".
+	Vão para servidores onde são gerenciados, como o Github ou Bitbucket.
+	Cada desenvolvedor do time pode baixar o repositório e criar versões diferentes em sua máquina.
+	Comandos:
+		git status --> É útil para verificar mudanaças e para ver se você está num repositório git. É necessário estar numa pasta .git.
+		git init --> cria um repositório, que será reconhecido pelo git como um projeto e responderá aos próximos comandos.
+		
+O que é GitHub?
+	É o serviço mais famoso e gratuito feito para gerenciar repositórios.
+	Podemos enviar nossos projetos para o GitHub e disponibilizar para outros devs.
+	Pode ser utilizado para projetos públicos e privados.
+	
+Enviando repositórios para o GitHub:
+	Só é necessário fazer uma vez por projeto.
+	Comandos:
+		git add <arquivo> --> adiciona um arquivo ao repositório
+		git commit -m "mensagem" --> commita e envia para o servidor, seguido de uma mensagem informando sobre oque é o commit.
+		git branch -m main --> criando uma branch mestre, onde o código correto estará depositado.
+		git remote add origin https://github.com/GuiMelo012x/git-teste1.git --> sincroniza e dá uma origem ao projeto.
+		git push -u origin main
+		
+Como verificar mudanças no projeto:
+	Podem ser verificadas pelo comando frequentemente usado "git status".
+	Comando:
+		git status --> mostra as mudanças que foram feitas no repositório antes do commit.
+	Tudo que está no "git status" é o que não está no github.
+	Ao usar o comando, o terminal irá dizer todos os arquivos modificados antes do commit na seção "Untracked files"
+	No VSCode, ele avisa com uma letra do lado direito do nome do arquivo o status dele.
+		U -> Untracked. Não deu o comando "git add".
+		M -> Modified. Arquivo que já foi enviado ao git e foi modificado.
+		A -> Added. Arquivo que foi adicionado e ainda não foi enviado ao github..
+
+Adicionando arquivos ao projeto:
+	Para isto, foi criado 2 arquivos, um em HTML e outro em CSS.
+	Se o arquivo não for adicionado, ele não estará no controle de versão.
+	Comandos:
+		git add --> adiciona o arquivo no repositório e ao controle de versão. Adiciona um por vez, de forma específica.
+		git add . --> adiciona tudo de uma vez.
+		
+Salvando alterações no projeto:
+	Através do commit, é possível salvar as mudanças que foram feitas no repositório.
+	É necessário ter o costume de "commitar" toda vez que fizer uma mudança, enviando uma mensagem informando sobre oque foi alterado.
+	É sempre bom verificar com o git status quais mudanças que estão esperando pelo commit.
+	Comandos:
+		git commit <arquivo> -m "mensagem" --> commita e envia uma mensagem para o repositório explicando o que foi o commit.
+		git commit -a -m "mensagem" --> commita todos os arquivos de uma vez.
+		git commit -m "mensagem" --> funciona também.
+		
+Enviando o código para o repositório:
+	Após commitar, é necessário enviar o código atualizado para o repositório.
+	Após o commit, o código estará apenas aguardando o push.
+	Antes de qualquer push, é necessário dar add e commit.
+	É necessário verificar pelo git status se não tem mais nada como "untracked" ou "modified" para dar commit, e tudo está pronto mesmo.
+	Para isso, utilizamos o git push.
+	Comando:
+		git push --> envia todos os códigos para o repositório (https://github.com/GuiMelo012x/git-teste1)
+	É possível, por meio do github, ver os históricos dos commits.
+	
+	
+Recebendo arquivos:
+	É comum ter que sincronizar o repositório local com as mudanças do remoto.
+	Após o comando, serão buscadas atualizações, e se encontradas, serão unidas ao código existente na própria máquina.
+	Comando:
+		git pull --> atualiza o repositório remoto para adicionar, editar ou remover os arquivos que estão lá no github, caso esteja desatualizado.
+			Se não tiver nada para atualizar, ele diz "already up to date"
+			Se tiver desatualizado, o arquivo do github virá para o VSCode, por exemplo.
+	Se o arquivo for editado lá no Github, também é possível dar o git pull e atualizá-lo.
+
+Clonando repositórios:
+	Baixa um repositório do Github para a sua máquina local.
+	Só precisa ser utilizado uma vez.
+	Comando:
+		git clone <url> --> clona o repositório e baixa ele para a sua máquina.
+		
+Removendo arquivos do repositório:
+	Caso queira, é possível remover do git um arquivo.
+	Comando:
+		git rm <arquivo> --> remove o arquivo da pasta.
+		
+Verificando alterações por meio dos logs:
+	Podemos acessar um log de modificaçõe feitas no projeto.
+	Comando: 
+		git log --> mostra uma informação do commits realizado no projeto até o momento.
+			para sair, basta apertar "q" ou "ctrl + c"
+
+Renomeando arquivos:
+	Com o mesmo comando, é possível renomear ou mover um arquivo.
+	No git status, o git considera a ação de mover como "rename".
+	Comando:
+		git mv <arquivo> <local de destino> --> move o arquivo.
+		git mv <arquivo> <nome do arquivo> --> renomeia um arquivo. Se não mover o arquivo, ele entende que você quer renomear.
+		
+Desfazendo alterações:
+	O arquivo modificado pode ser retornado ao estado original.
+	O estado original é classificado como o estado que o arquivo está lá no github.
+	Acontece um rollback, e o arquivo volta para como estava desde o último push.
+	Comando:
+		git checkout <arquivo> --> desfaz a alteração e muda o arquivo de volta para como ele está no github.
+	
+Ignorando arquivos e diretórios em um projeto:
+	As vezes, existem arquivos que são gerados automaticamente, ou dados sensíveis que não deveriam estar no git.
+	Para isto, é necessário criar um arquivo chamado ".gitignore" na raiz do projeto.
+	Nele, podemos inserir todos os arquivos que não irão participar do versionamento.
+	Quando um arquivo é ignorado, ele fica cinza.
+	Dentro do arquivo gitignore:
+		arquivoSensivel.py --> ignora o arquivo.
+		pasta_sensivel/* --> ignora todos os arquivos dentro da pasta.
+
+Desfazendo todas as alterações:
+	Com o comando git reset, podemos restar as mudanças feitas.
+	Utilizado com a flag --hard, ele altera todas as alterçaões commitadas e todas as pendentes, sendo todas excluídas.
+	Comando perigoso, deve ser utilizado com cuidado.
+	Comando:
+		git reset --hard origin/master --> reseta todas as alterações feitas.
+		
+O que são branches?
+	É uma ramificação de um projeto.
+	É a forma que o git separa as versões dos projetos.
+	Geralmente, cada nova função do projeto fica em um branch separado.
+	Após a finalização das alterações, os branches são unidos para ter o código-fonte final.
+	É uma versão separada da versão original do projeto.
+	
+Criando e visualizando as branches:
+	Muito utilizado no dia-a-dia do programador.
+	Comandos:
+		git branch --> visualiza os branches disponíveis
+		git branch <nome> --> cria um novo branch
+
+Deletando branches:
+	Geralmente é utilizado quando o branch foi criado errado
+	Não é comum deletar um branch, normalmente é guardado o histórico do trabalho.
+	Utilizar com cuidado, pois pode perder o trabalho feito.
+	Comando:
+		git branch -d <nome da branch> --> apaga a branch.
+		
+Mudando de Branch:
+	Ter cuidado, pois os arquivos que não foram commitados perdem as alterações.
+	Sempre que mudar uma branch, commitar.
+	Sempre que criar uma branch, criar ele a partir da master.
+	Comando:
+		git checkout <nome de um branch existente> --> muda para a branch existente. 
+		git checkout -b <nome do branch> --> cria e muda para a branch criado.
+
+Unindo branches
+	O código de duas branches distintos pode ser unido.
+	É por meio dele que recebemos atualizações de outros dev.
+	Comando:
+		git merge <nome> --> une o código duas branches.
+		
+Stash 
+	Utilizado para salvar as modificações atuais para prosseguir com uma outra abordagem de solução e não perder o código
+	Assim, você salva o código em um lugar e pode recomeçar do zero.
+	Podemos continuar de onde paramos com o arquivos adicionados a stash.
+	Comandos: 
+		git stash --> salva o código e guarda no "stash".
+		git stash list --> mostra a lista de stashes.
+		git stash apply <0,1,2,3...> --> recupera a stash.
+		git stash show -p <0,1,2,3...> --> mostra as modificações da stash.
+		git stash clear --> limpa todas as stashes da branch.
+		git stash drop <0,1,2,3...> --> limpa uma stash específica.
+		
+Tags
+	Podemos criar tags nas branches.
+	Uma tag é diferente da stash, servindo como um checkpoint de um branch.
+	É utilizada para demarcar estágios do desenvolvimento de algum recurso, como "v1,v2,v3" etc.
+	Comando:
+		git tag -a <nome> -m <mensagem> --> cria uma tag e sua mensagem.
+		git tag --> verifica as tags de uma branch. É como se fosse uma branch de uma branch.
+		git show <nome> --> verificamos os detalhes de uma tag.
+		git checkout <nome da tag> --> troca de tag.
+		git push origin <nome da tag> --> envia a tag pro repositório.
+		git push origin --tags --> envia mais tag.
+	As tags podem ser enviadas para o repositório do código, sendo compartilhada entre os devs.
+
+Encontrando branches
+	Branches novos são criados a todo tempo e o seu git pode não estar mapeando todos eles.
+	Comando:
+		git fetch --> atualiza todos os branches e tag que ainda não estão reconhecidos por você.
+		
+Recebendo alterações - git pull
+	Cada branch pode ser atualizado com o git pull.
+	Guia de boa prática para fazer toda vez ao começar a trabalhar em um projeto:
+		git checkout master -> git pull -> git checkout -b "nome do branch novo"
+
+Enviando alterações - Git push
+	O git push envia as alterações para o repositório remoto.
+	Ele serve também para enviar as atualizaçõe de um branch específico para um outro dev.
+	Antes de qualquer push, é necessário dar add e commit.
+	
+Utilizando o remote
+	Através do comando "git remote", é possível adicionar um repositório para trackear ou remover.
+	Quando criamos um repositório remoto, adicionamo ele ao git com:
+		git remote add origin <link> --> adiciona um url de origem para o repositório.
+		git remote -v --> verifica as origens do repositório.
+		git remote rm origin --> remove a url de origem.
+		
+Trabalhando com submódulos
+	Submódulos é a maneira de se ter dois ou mais projetos em um só repositório.
+	É possível adicionar uma dependência ao projeto atual, porém mantendo suas estruturas separadas.
+	Comandos:
+		git submodule add <repo> --> adiciona um submódulo.
+		git submodule --> verifica os submódulos.
+
+Atualizando submódulos
+	Antes de atualizar o submódulo, é necessário commitar as mudanças.
+	Comando:
+		git push --recurse-submodules=on-demand --> atualiza o submódulo. 
+	Este comando faz a atualização apenas no submódulo.
+	
+Análise e Inspeção de Repositórios
+
+Exibindo detalhes de branches e as diferenças entre um branch e outro.
+	Através do git show, as modificações de arquivos entre cada commits podem ser exibidas
+	Comando:
+		git show --> dá informações úteis de um branch e seus commits.
+		git diff --> exibe as diferenças do branch atual com o remoto no terminal.
+
+Log resumido
+	Comando:
+		git shortlog --> dá um log resumido do projeto.
+	Cada commit pode ser unido por nome do autor.
+	Desta forma, tem como saber quais commits foram enviados ao projeto e por quem.
+	Mostra uma lista sde commits e quem commitou.
+	
+Limpando arquivos untracked
+	O comando git clean verifica e limpa arquivos que não estão sendo trackeados.
+	É útil para todos os arquivos que não foram adicionados no git add.
+	Utilizado para arquivos que são gerados automaticamente como logs e atrapalham a visualização do que é realmente importante.
+	Para evitar que um arquivo importante seja removido, é necessário utilizar o comando git add nele, senão, ele vai junto com os logs no git clean.
+	Comando:
+		git clean --> limpa arquivos que não foram trackeados.
+		
+Otimizando o repositório
+	O comando git gc detecta e remove arquivos que ele julga desnecessários para liberar memória.
+	Gc é uma abreviação para garbage collector.
+	Isso fará com que o repositório seja otimizado em questão de performance.
+	É bom utilizar uma vez por mês.
+	É comum demorar caso o repositório seja muito grande.
+	Comando: 
+		git gc --> comprime e remove arquivos em que o git julga desnecessário.
+		
+Checando integridade dos arquivos
+	O comando git fsck verifica arquivos que foram corrompidos, ou possíveis corrupções nele.
+	Fsck é uma abreviação para File System Check
+	É um comando de rotina, utilizado frequentemente para ver se está tudo certo com os arquivos do repositório.
+	Comando:
+		git fsck --> checa a integridade e procura por corrupções.
+		
+Reflog
+	O comando git reflog mapea todos os passos dados no repositório em um log. Armazena até quando há mudança de branch.	
+	O git log armazena apenas os commits de um branch.
+	Os reflogs ficam salvos até expirar, o tempo de expiração padrão é de 30 dias.
+	
+Zipando o repositório
+	Se necessário fazer um backup rápido do projeto, e não tenha como usar o git clone, é possível transformá-lo em arquivo.
+	Dessa forma, ele zipa a branch master em um arquivo.
+	Comando:
+		git archive --format zip --output master_files.zip master --> Zipa a branch master num arquivo .zip.

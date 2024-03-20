@@ -1,0 +1,62 @@
+O que é Markdown?
+	Markdown é uma forma de adicionar estilos a textos na web.
+	Dá uma melhor experiência para o usuário nas documentações, deixando mais organizado.
+	O arquivo README, por exemplo, aceita markdown.
+	A extensão "md" significa markdown. Por isso que o readme se chama o  "readme.md".
+	Tem como exibir trechos de códigos, links, imagens etc.
+
+Criando Títulos
+	Os cabeçalhos são representados pelo símbolo #
+	São como "headings" do HTML.
+	# --> h1
+	## --> h2
+	### --> h3 
+	E assim por diante, até o h6.
+	
+Ênfase nos Textos
+	Para escrever em negrito: **texto** ou __texto__
+	Para escrever em itálico: *texto* ou _texto_
+	Para escrever combinando os dois: _escrever **texto** combinado_
+	
+Listas
+	As listas não ordenadas começam com: 
+		* Item
+	As listas ordenadas começam com:
+		1. Item 1
+		
+Inserindo Imagens
+	Para inserir imagens:
+		![Texto Alt](link da imagem)
+	O texto alt seria para deficientes visuais poderem saber do que se trata a imagem.
+	Também serve para quando a imagem não carregar.
+	A imagem pode estar no próprio repositório ou pode ser externa.
+	Imagem local é quando você tem o arquivo no seu repositório local.
+	Imagem externa é quando você pega um link da internet.
+	
+Links
+	Para inserir links:
+		[texto do link](link)
+	Texto do link é a parte do texto que ficará azul/roxa, servindo como um hyperlink.
+	Se for um link do Github pode inserir de forma direta: https://github.com
+	Para inserir imagens com links:
+		[![Alt text](link ou arquivo da imagem)](link)
+	É como se a imagem fosse o próprio alt text do link.
+	
+Código - Apenas para o Github
+	Para inserir códigos:
+		``` código ```
+	Esta sintaxe é especial para o Github.
+	É bom colocar a linguagem de programação na qual o código está escrito, pois ele pode ajudar, dar highlight e sugerir.
+	Exemplo:
+	```python
+		def soma(a,b):
+			print('Esta função está somando A com B')
+			return a+b
+	```
+
+Task List - Apenas para o Github
+	Sintaxe para tarefas concluídas:
+		[x] Tarefa 1 
+	Sintaxe para tarefas não concluídas:
+		[ ] Tarefa 2
+	No vazio, é necessário haver um espaço. Este espaço é desnecessário entre o "x".
