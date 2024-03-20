@@ -10,3 +10,8 @@ Os repositórios utilizados para aprender as práticas foram divididos em 2 ao l
 * https://github.com/GuiMelo012x/git-teste1
 
 * https://github.com/GuiMelo012x/git-teste2
+
+## Projeto - GitHub Pages
+
+Neste projeto, estarei fazendo, com a ajuda do professor, uma página de portfólio e apresentação sobre mim e minhas habilidades.
+Disponível em: https://github.com/GuiMelo012x/GuiMelo012x.github.io 
