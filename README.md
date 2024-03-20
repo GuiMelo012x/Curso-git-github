@@ -3,7 +3,7 @@ Curso de Git e Github que estou fazendo na Udemy: Git e GitHub do básico ao ava
 
 ## Repositórios
 
-Neste repositório, estão apenas os .txt contendo minhas anotações, enquanto as partes em que foram realizados as práticas, comandos e testes, estão em outros 2 repositórios por enquanto.
+Neste repositório, estão apenas os .txt contendo minhas anotações, enquanto as partes em que foram realizadas as práticas, comandos e testes, estão em outros 2 repositórios por enquanto.
 
 Os repositórios utilizados para aprender as práticas foram divididos em 2 ao longo do curso:
 
