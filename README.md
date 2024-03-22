@@ -16,7 +16,7 @@ Os repositórios utilizados para aprender as práticas foram divididos em 2 ao l
 
 ## Projeto - GitHub Pages
 
-Neste projet fiz, com a ajuda do professor, uma página de portfólio e apresentação sobre mim e minhas habilidades.
+Neste projeto, fiz, com a ajuda do professor Matheus Battisti, do Hora de Codar, uma página de portfólio e apresentação sobre mim e minhas habilidades.
 
 Repositório disponível em: https://github.com/GuiMelo012x/GuiMelo012x.github.io 
 Portfólio disponível em: https://guimelo012x.github.io
