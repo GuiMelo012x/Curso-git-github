@@ -6,9 +6,9 @@ Certificado: https://www.udemy.com/certificate/UC-73324817-6b4f-499a-b6f4-47f3dc
 
 ## Repositórios
 
-Neste repositório, estão apenas os .txt contendo minhas anotações, enquanto as partes em que foram realizadas as práticas, comandos e testes, estão em outros 2 repositórios por enquanto.
+Neste repositório, estão apenas os .txt contendo minhas anotações, enquanto as partes em que foram realizadas as práticas, comandos e testes, estão em outros 2 repositórios.
 
-Os repositórios utilizados para aprender as práticas foram divididos em 2 ao longo do curso:
+Aqui estão os repositórios utilizados para aprender as práticas, que foram divididos em 2 ao longo do curso:
 
 * https://github.com/GuiMelo012x/git-teste1
 
