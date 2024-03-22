@@ -1,4 +1,4 @@
-# Curso Git - Github - Concluído
+# Curso Git e Github - Concluído
 Curso de Git e Github que realizei na Udemy: Git e GitHub do básico ao avançado do Hora de Codar.
 
 Curso concluído! 
