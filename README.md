@@ -1,5 +1,8 @@
 # Curso Git - Github - Concluído
-Curso de Git e Github que estou fazendo na Udemy: Git e GitHub do básico ao avançado (c/ gist e GitHub Pages) do Hora de Codar.
+Curso de Git e Github que realizei na Udemy: Git e GitHub do básico ao avançado do Hora de Codar.
+
+Curso concluído! 
+Certificado: https://www.udemy.com/certificate/UC-73324817-6b4f-499a-b6f4-47f3dc3ee287/
 
 ## Repositórios
 
@@ -13,6 +16,7 @@ Os repositórios utilizados para aprender as práticas foram divididos em 2 ao l
 
 ## Projeto - GitHub Pages
 
-Neste projeto, estarei fazendo, com a ajuda do professor, uma página de portfólio e apresentação sobre mim e minhas habilidades.
+Neste projet fiz, com a ajuda do professor, uma página de portfólio e apresentação sobre mim e minhas habilidades.
 
-Disponível em: https://github.com/GuiMelo012x/GuiMelo012x.github.io 
+Repositório disponível em: https://github.com/GuiMelo012x/GuiMelo012x.github.io 
+Portfólio disponível em: https://guimelo012x.github.io
